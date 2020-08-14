@@ -5,7 +5,8 @@ Add badge number to application icon
 ## Installation
 
 ```sh
-npm install react-native-badge-number
+yarn add 'https://github.com/daimonkor/react-native-badge-number'
+yarn add react-native-shortcut-badge
 ```
 
 ## Usage
@@ -13,9 +14,8 @@ npm install react-native-badge-number
 ```js
 import BadgeNumber from "react-native-badge-number";
 
-// ...
-
-const result = await BadgeNumber.multiply(3, 7);
+BadgeNumber.setBadge(7);
+const result = await BadgeNumber.getBadge();
 ```
 
 ## Contributing

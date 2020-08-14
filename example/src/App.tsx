@@ -6,7 +6,8 @@ export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
   React.useEffect(() => {
-    BadgeNumber.multiply(3, 7).then(setResult);
+    BadgeNumber.setBadge(7);
+    BadgeNumber.getBadge().then(setResult);
   }, []);
 
   return (

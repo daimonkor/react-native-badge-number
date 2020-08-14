@@ -12,7 +12,9 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		20F357B024636CDF00C146DC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F357AF24636CDF00C146DC /* File.swift */; };
+		6F5F1E6624E72496008D7D2D /* BadgeNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F1E6524E72496008D7D2D /* BadgeNumber.m */; };
+		6F793CA224E72EDE003D5A20 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F793CA124E72EDE003D5A20 /* File.swift */; };
+		6F793CA724E732D4003D5A20 /* BadgeNumberExample-Bridging-Header.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F793CA624E732D4003D5A20 /* BadgeNumberExample-Bridging-Header.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +26,11 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BadgeNumberExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BadgeNumberExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BadgeNumberExample/main.m; sourceTree = "<group>"; };
-		20F357AD24636CDE00C146DC /* BadgeNumberExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BadgeNumberExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		20F357AE24636CDF00C146DC /* BadgeNumberExample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BadgeNumberExample-Bridging-Header.h"; sourceTree = "<group>"; };
-		20F357AF24636CDF00C146DC /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		4D7192F03A36A017E887435B /* Pods-BadgeNumberExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgeNumberExample.release.xcconfig"; path = "Target Support Files/Pods-BadgeNumberExample/Pods-BadgeNumberExample.release.xcconfig"; sourceTree = "<group>"; };
+		6F5F1E6424E72496008D7D2D /* BadgeNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BadgeNumber.h; sourceTree = "<group>"; };
+		6F5F1E6524E72496008D7D2D /* BadgeNumber.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BadgeNumber.m; sourceTree = "<group>"; };
+		6F793CA124E72EDE003D5A20 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		6F793CA624E732D4003D5A20 /* BadgeNumberExample-Bridging-Header.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "BadgeNumberExample-Bridging-Header.m"; sourceTree = "<group>"; };
 		871719007ECC5EAD276C345C /* Pods-BadgeNumberExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BadgeNumberExample.debug.xcconfig"; path = "Target Support Files/Pods-BadgeNumberExample/Pods-BadgeNumberExample.debug.xcconfig"; sourceTree = "<group>"; };
 		BCEA90A70F4BEAD7E9FA28B2 /* libPods-BadgeNumberExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BadgeNumberExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -55,6 +58,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				6F5F1E6424E72496008D7D2D /* BadgeNumber.h */,
+				6F5F1E6524E72496008D7D2D /* BadgeNumber.m */,
 			);
 			name = BadgeNumberExample;
 			sourceTree = "<group>";
@@ -87,14 +92,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				20F357AF24636CDF00C146DC /* File.swift */,
-				20F357AE24636CDF00C146DC /* BadgeNumberExample-Bridging-Header.h */,
+				6F793CA624E732D4003D5A20 /* BadgeNumberExample-Bridging-Header.m */,
+				6F793CA124E72EDE003D5A20 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* BadgeNumberExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				1CFFDEF7170271C97B8B7E5A /* Pods */,
-				20F357AD24636CDE00C146DC /* BadgeNumberExample-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -240,8 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5F1E6624E72496008D7D2D /* BadgeNumber.m in Sources */,
+				6F793CA724E732D4003D5A20 /* BadgeNumberExample-Bridging-Header.m in Sources */,
+				6F793CA224E72EDE003D5A20 /* File.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				20F357B024636CDF00C146DC /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,9 +274,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = BadgeNumberExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "\"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)\" \"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\" $(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DFB_SONARKIT_ENABLED=1",
@@ -282,7 +288,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.BadgeNumberExample.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BadgeNumberExample;
-				SWIFT_OBJC_BRIDGING_HEADER = "BadgeNumberExample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "BadgeNumberExample-Bridging-Header.m";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -309,7 +315,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.BadgeNumberExample.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = BadgeNumberExample;
-				SWIFT_OBJC_BRIDGING_HEADER = "BadgeNumberExample-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "BadgeNumberExample-Bridging-Header.m";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
