@@ -96,6 +96,8 @@ const increment = async (i = 1) => {
   return current + i;
 };
 
+const supported = Platform.OS === 'ios' ? true : ShortcutBadge.supported;
+
 export default {
   setBadge,
   getBadge,
@@ -104,4 +106,5 @@ export default {
   requestPermissions,
   checkPermissions,
   abandonPermissions,
+  supported,
 };
