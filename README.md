@@ -9,6 +9,14 @@ yarn add 'https://github.com/daimonkor/react-native-badge-number'
 yarn add react-native-shortcut-badge
 ```
 
+If you are using [Proguard](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/), add this to your android/app/proguard-rules.pro
+
+See https://github.com/leolin310148/ShortcutBadger/issues/46
+
+```
+-keep class me.leolin.shortcutbadger.impl.** { <init>(...); }
+```
+
 ## Usage
 
 ```js
