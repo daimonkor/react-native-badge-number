@@ -1,4 +1,4 @@
-package com.github.amarcruz.rnshortcutbadge;
+package com.example.reactnativebadgenumber;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -15,6 +15,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.github.amarcruz.rnshortcutbadge.ShortcutBadge;
 
 
 public class RNShortcutBadgeModule extends ReactContextBaseJavaModule {

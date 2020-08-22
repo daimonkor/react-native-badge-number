@@ -1,4 +1,4 @@
-package com.github.amarcruz.rnshortcutbadge;
+package com.example.reactnativebadgenumber;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

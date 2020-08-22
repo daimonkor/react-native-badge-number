@@ -23,7 +23,7 @@
     "test": "jest",
     "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build && cp -a example/ios ios/ && cp -a example/android android",
+    "prepare": "bob build && cp -a example/ios ios/",
     "release": "release-it",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",
