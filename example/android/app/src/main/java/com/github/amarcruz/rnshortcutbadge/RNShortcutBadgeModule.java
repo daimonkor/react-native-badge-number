@@ -9,29 +9,22 @@ import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.content.SharedPreferences;
 import android.util.Log;
-
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class RNShortcutBadgeModule extends ReactContextBaseJavaModule {
-
     private static final String TAG = "BadgeNumber";
-
     private ReactApplicationContext mReactContext;
-
     private ShortcutBadge shortcutbadge;
 
     RNShortcutBadgeModule(ReactApplicationContext reactContext) {
         super(reactContext);
-
         mReactContext = reactContext;
-
         shortcutbadge = new ShortcutBadge(mReactContext);
     }
 
@@ -72,9 +65,12 @@ public class RNShortcutBadgeModule extends ReactContextBaseJavaModule {
      * Dummy method to request permissions in Android.
      */
     @ReactMethod
-    public void requestPermission(final Promise promise) {
+    public void checkPermissions(final Promise promise) {
         promise.resolve(true);
     }
 
-
+    @ReactMethod
+    public void abandonPermissions(final Promise promise) {
+        promise.resolve(true);
+    }
 }

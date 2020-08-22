@@ -11,7 +11,7 @@ import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-import com.reactnativebadgenumber.BadgeNumberPackage;
+import com.github.amarcruz.rnshortcutbadge.RNShortcutBadgePackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -27,8 +27,8 @@ public class MainApplication extends Application implements ReactApplication {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for BadgeNumberExample:
-          // packages.add(new MyReactNativePackage());
-         // packages.add(new BadgeNumberPackage());
+           packages.add(new RNShortcutBadgePackage());
+
 
           return packages;
         }

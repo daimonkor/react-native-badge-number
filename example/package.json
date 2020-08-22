@@ -8,9 +8,6 @@
     "ios": "react-native run-ios",
     "start": "react-native start"
   },
-  "peerDependencies": {
-    "react-native-shortcut-badge": "^0.1.0-beta.2"
-  },
   "dependencies": {
     "react": "16.11.0",
     "react-native": "0.62.2"

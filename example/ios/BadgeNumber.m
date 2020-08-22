@@ -103,9 +103,17 @@ RCT_EXPORT_METHOD(setBadgeNumber:(NSInteger)number)
 /**
  * Get the current application icon badge number on the home screen
  */
-RCT_EXPORT_METHOD(getBadgeNumber:(RCTResponseSenderBlock)callback)
+
+RCT_REMAP_METHOD(getBadgeNumber,
+                 getBadgeNumberWithResolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
 {
-  callback(@[@(RCTSharedApplication().applicationIconBadgeNumber)]);
+  resolve(@[@(RCTSharedApplication().applicationIconBadgeNumber)]);
+}
+
+- (NSDictionary *)constantsToExport
+{
+  return @{ @"supported": @YES };
 }
 
 @end
