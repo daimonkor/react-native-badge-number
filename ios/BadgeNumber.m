@@ -106,4 +106,9 @@ RCT_REMAP_METHOD(getBadgeNumber,
   return @{ @"supported": @YES };
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+  return NO;  // only do this if your module initialization relies on calling UIKit!
+}
+
 @end
