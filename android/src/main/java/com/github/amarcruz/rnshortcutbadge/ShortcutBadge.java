@@ -30,7 +30,7 @@ public class ShortcutBadge {
   private boolean mSupported = false;
   private boolean mIsXiaomi = false;
 
-  ShortcutBadge(Context reactContext) {
+  public ShortcutBadge(Context reactContext) {
     mContext = reactContext;
     mPrefs = reactContext.getSharedPreferences(BADGE_FILE, Context.MODE_PRIVATE);
 
