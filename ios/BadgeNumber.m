@@ -98,7 +98,7 @@ RCT_REMAP_METHOD(getBadgeNumber,
                  getBadgeNumberWithResolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject)
 {
-  resolve(@[@(RCTSharedApplication().applicationIconBadgeNumber)]);
+  resolve([NSNumber numberWithInteger:RCTSharedApplication().applicationIconBadgeNumber]);
 }
 
 - (NSDictionary *)constantsToExport
