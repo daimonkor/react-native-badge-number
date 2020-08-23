@@ -4,7 +4,12 @@ Add badge number to application icon
 
 ## Getting started
 
+`$ yarn add react-native-badge-number`
+
+OR
+
 `$ yarn add 'https://github.com/daimonkor/react-native-badge-number'`
+
 
 ### Mostly automatic installation
 
