@@ -1,19 +1,28 @@
-require 'json'
+require "json"
 
-package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
+package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
-  s.name           = package['name']
-  s.version        = package['version']
-  s.summary        = package['description']
-  s.description    = package['description']
-  s.license        = package['license']
-  s.author         = package['author']
-  s.homepage       = package['homepage']
-  s.source         = { git: package['repository'], tag: s.version }
-  s.requires_arc   = true
-  s.platform       = :ios, '9.0'
-  s.preserve_paths = 'LICENSE', 'README.md', 'package.json', 'index.js'
-  s.source_files   = 'example/ios/*.{h,m}'
-  s.dependency 'React'
+  s.name         = "react-native-badge-number"
+  s.version      = package["version"]
+  s.summary      = package["description"]
+  s.description  = <<-DESC
+                  react-native-badge-number
+                   DESC
+  s.homepage     = "https://github.com/daimonkor/react-native-badge-number"
+  # brief license entry:
+  s.license      = "MIT"
+  # optional - use expanded license entry instead:
+  # s.license    = { :type => "MIT", :file => "LICENSE" }
+  s.authors      = { "Your Name" => "yourname@email.com" }
+  s.platforms    = { :ios => "9.0" }
+  s.source       = { :git => "https://github.com/daimonkor/react-native-badge-number.git", :tag => "#{s.version}" }
+
+  s.source_files = "ios/**/*.{h,c,m,swift}"
+  s.requires_arc = true
+
+  s.dependency "React"
+  # ...
+  # s.dependency "..."
 end
+
