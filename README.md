@@ -4,7 +4,12 @@ Add badge number to application icon
 
 ## Getting started
 
+`$ yarn add react-native-badge-number`
+
+OR
+
 `$ yarn add 'https://github.com/daimonkor/react-native-badge-number'`
+
 
 ### Mostly automatic installation
 
@@ -27,6 +32,26 @@ import BadgeNumber from "react-native-badge-number";
 BadgeNumber.setBadge(7);
 const result = await BadgeNumber.getBadge();
 ```
+
+## API
+
+### `async setBadge(number: number)`
+Set badge counter.
+### `getBadge: Promise<number>`
+Return badge counter.
+### `requestPermissions(permissions?: {alert?: boolean; badge?: boolean; sound?: boolean;}): Promise<{alert: boolean; badge: boolean; sound: boolean;}`
+Request notification permissions (iOS).                                                                                                             
+### `abandonPermissions()`
+Clear notification permissions (iOS).                                                                                                             
+### `checkPermissions(callback)`
+Check notification permissions (iOS).   
+### `decrement(i: number = 1): Promise<number>`
+Decrement badge counter.    
+### `increment(i: number = 1): Promise<number>`
+Increment badge counter. 
+### `supported: boolean`
+Return support Androind launcher to change badge counter
+
 
 ## Native code (kill, background application state)
 
