@@ -35,19 +35,19 @@ const result = await BadgeNumber.getBadge();
 
 ## API
 
-### `async setBadge(number)`
+### `async setBadge(number: number)`
 Set badge counter.
-### `getBadge:Promise<number>`
+### `getBadge: Promise<number>`
 Return badge counter.
-### `requestPermissions (permissions?: {alert?: boolean; badge?: boolean; sound?: boolean;}): Promise<{alert: boolean; badge: boolean; sound: boolean;}`
+### `requestPermissions(permissions?: {alert?: boolean; badge?: boolean; sound?: boolean;}): Promise<{alert: boolean; badge: boolean; sound: boolean;}`
 Request notification permissions (iOS).                                                                                                             
 ### `abandonPermissions()`
 Clear notification permissions (iOS).                                                                                                             
 ### `checkPermissions(callback)`
 Check notification permissions (iOS).   
-### `decrement(i = 1): Promise<number>`
+### `decrement(i: number = 1): Promise<number>`
 Decrement badge counter.    
-### `increment (i = 1):Promise<number>`
+### `increment(i: number = 1): Promise<number>`
 Increment badge counter. 
 ### `supported: boolean`
 Return support Androind launcher to change badge counter
