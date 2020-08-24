@@ -1,7 +1,7 @@
 {
   "name": "react-native-badge-number",
   "title": "React Native Badge Number",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add badge number to application icon",
   "main": "index.js",
   "files": [
