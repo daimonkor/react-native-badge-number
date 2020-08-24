@@ -33,6 +33,26 @@ BadgeNumber.setBadge(7);
 const result = await BadgeNumber.getBadge();
 ```
 
+## API
+
+### `async setBadge(number)`
+Set badge counter.
+### `getBadge:Promise<number>`
+Return badge counter.
+### `requestPermissions (permissions?: {alert?: boolean; badge?: boolean; sound?: boolean;}): Promise<{alert: boolean; badge: boolean; sound: boolean;}`
+Request notification permissions (iOS).                                                                                                             
+### `abandonPermissions()`
+Clear notification permissions (iOS).                                                                                                             
+### `checkPermissions(callback)`
+Check notification permissions (iOS).   
+### `decrement(i = 1): Promise<number>`
+Decrement badge counter.    
+### `increment (i = 1):Promise<number>`
+Increment badge counter. 
+### `supported: boolean`
+Return support Androind launcher to change badge counter
+
+
 ## Native code (kill, background application state)
 
 <details><summary>Android OneSignal sample <b>NotificationExtenderServiceImplement</b></summary>
