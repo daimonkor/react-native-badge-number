@@ -1,23 +1,14 @@
 package com.icebergteam.badgenumber;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
-import android.os.Build;
-import android.content.SharedPreferences;
 import android.util.Log;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import java.util.HashMap;
 import java.util.Map;
-import com.facebook.react.bridge.Callback;
-
 import com.github.amarcruz.rnshortcutbadge.ShortcutBadge;
+import com.github.amarcruz.rnshortcutbadge.ShortcutBadgeException;
+
 
 public class BadgeNumberModule extends ReactContextBaseJavaModule {
     private static final String TAG = "BadgeNumber";
@@ -45,10 +36,17 @@ public class BadgeNumberModule extends ReactContextBaseJavaModule {
      * request an update, which might take a while.
      */
     @ReactMethod
-    public void setBadgeNumber(final int count, final Promise promise) {
+    public void setBadgeNumber(final int count, final boolean ignoreSupportError, final Promise promise) {
         try {
           shortcutbadge.setCount(count);
           promise.resolve(true);
+        } catch (ShortcutBadgeException ex) {
+          Log.e(TAG, "Error setting the badge", ex);
+          if(ignoreSupportError){
+              promise.resolve(true);
+          }else {
+              promise.reject(ex);
+          }
         } catch (Exception ex) {
             Log.e(TAG, "Error setting the badge", ex);
             promise.reject(ex);

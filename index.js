@@ -1,8 +1,8 @@
 import { Platform } from 'react-native';
 import { NativeModules } from 'react-native';
 
-const setBadge = async number => {
-    await NativeModules.BadgeNumber.setBadgeNumber(number);
+const setBadge = async (number, ignoreSupportError = true) => {
+    await NativeModules.BadgeNumber.setBadgeNumber(number, ignoreSupportError);
 };
 
 const getBadge = () => {
@@ -64,15 +64,15 @@ const checkPermissions = callback => {
     NativeModules.BadgeNumber.checkPermissions(callback);
 };
 
-const decrement = async (i = 1) => {
+const decrement = async (i = 1, ignoreSupportError = true) => {
     const current = await getBadge();
-    await setBadge(current - i);
+    await setBadge(current - i, ignoreSupportError);
     return current - i;
 };
 
-const increment = async (i = 1) => {
+const increment = async (i = 1, ignoreSupportError = true) => {
     const current = await getBadge();
-    await setBadge(current + i);
+    await setBadge(current + i, ignoreSupportError);
     return current + i;
 };
 const supported = NativeModules.BadgeNumber.supported;

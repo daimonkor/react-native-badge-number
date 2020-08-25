@@ -9,12 +9,10 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.util.Log;
-
 import java.util.HashMap;
 import java.util.Map;
-
+import static com.github.amarcruz.rnshortcutbadge.ShortcutBadgeException.NO_SUPPORT_LAUNCHER;
 import me.leolin.shortcutbadger.ShortcutBadger;
-
 
 public class ShortcutBadge {
 
@@ -69,7 +67,7 @@ public class ShortcutBadge {
     mPrefs.edit().putInt(BADGE_KEY, count).apply();
 
     if (!mSupported) {
-      throw new Exception("Cannot set badge.");
+      throw new ShortcutBadgeException(NO_SUPPORT_LAUNCHER, "Cannot set badge.");
     }
 
     boolean ok;
@@ -81,9 +79,8 @@ public class ShortcutBadge {
     }
 
     if (!ok) {
-      throw new Exception("Cannot set badge.");
+      throw new ShortcutBadgeException(NO_SUPPORT_LAUNCHER, "Cannot set badge.");
     }
-
   }
 
   public int getCount() {

@@ -84,7 +84,9 @@ static inline NSDictionary *RCTSettingsDictForUNNotificationSettings(BOOL alert,
 /**
  * Update the application icon badge number on the home screen
  */
-RCT_EXPORT_METHOD(setBadgeNumber:(NSInteger)number)
+RCT_EXPORT_METHOD(setBadgeNumber:(NSInteger)number
+ignoreSupportError: BOOL
+)
 {
 
   RCTSharedApplication().applicationIconBadgeNumber = number;
