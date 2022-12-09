@@ -1,4 +1,4 @@
-package com.badgenumber;
+package com.icebegteam.badgenumber;
 
 import androidx.annotation.NonNull;
 
